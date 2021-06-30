@@ -1,0 +1,72 @@
+.container {
+    margin: auto;
+    width: 400px;
+
+    padding: 8px;
+
+    border: 2px solid green;
+}
+
+.header {
+    padding: 32px;
+    text-align: center;
+
+    border: 2px solid blue;
+}
+
+.row {
+    margin: 16px 4px;
+}
+
+.row-add-word {
+    padding: 16px;
+    border: 2px solid red;
+}
+
+.row-delete-word {
+    padding: 16px;
+    border: 2px solid black;
+}
+
+.row-count-word {
+    padding: 16px;
+    border: 2px solid aqua;
+}
+
+.row-unique-words {
+    padding: 16px;
+    border: 2px solid brown;
+}
+
+
+
+/* Buttons */
+.row__button {
+    padding: 4px 4px;
+    width: 72px;
+
+    color: white;
+    font-weight: bold;
+}
+
+#addWordButton {
+    background-color: blue;
+}
+
+#deleteWordButton {
+    background-color: red;
+}
+
+#checkWordButton {
+    background-color: green;
+}
+
+#getUniqueWordsButton {
+    background-color: purple;
+}
+
+#startButton:disabled,
+#cancelButton:disabled
+{
+    opacity: 0.3;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>RestAPI</title>
+    <meta name="description" content="Obsługa API do dodawania słów" />
+    <meta name="keywords" content="api, rest" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="api_handling.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <header class="header">Kolekcja słów</header>
+    </div>
+
+    <!--Dodawanie słów do kolekcji-->
+    <div class="row">
+        <fieldset class="row-add-word">
+            <legend>Dodaj słowo</legend>
+            <input type="text" id="addWordField"/>
+            <input type="submit" value="Dodaj" class="row__button" id="addWordButton" onclick="addWordClick()"/>
+        </fieldset>
+    </div>
+
+    <!--Usuwanie słów z kolekcji-->
+    <div class="row">
+        <fieldset class="row-delete-word">
+            <legend>Usuń słowo</legend>
+            <input type="text" id="deleteWordField"/>
+            <input type="submit" value="Usuń" class="row__button" id="deleteWordButton" onclick="deleteWordClick()"/>
+        </fieldset>
+    </div>
+
+    <!--Sprawdzenie liczby wystąpień danego słowa w kolekcji-->
+    <div class="row">
+        <fieldset class="row-count-word">
+            <legend>Sprawdź ilość unikalnych wystąpień słowa</legend>
+            <input type="text" id="checkWordCountField"/>
+            <input type="submit" value="Sprawdź" class="row__button" id="checkWordButton" onclick="checkWordClick()"/>
+        </fieldset>
+    </div>
+
+    <!--Pobranie wszystkich unikalnych słów z kolekcji-->
+    <div class="row">
+        <fieldset class="row-unique-words">
+            <legend>Pobierz wszystkie unikalne słowa</legend>
+
+            <input type="submit" value="Pobierz" class="row__button" id="getUniqueWordsButton" onclick="getUniqueWordsClick()"/>
+            <div><label for="wordList">Słowa</label></div>
+            <textarea name="wordList" id="uniqueWordListText"
+                      rows="4" cols="41"
+                      minlength="5" maxlength="25"></textarea>
+        </fieldset>
+    </div>
+</div>
+
+</body>
+</html>
