@@ -21,8 +21,8 @@ public class WordController {
     List<String> words = new ArrayList<>();
 
     //*1* Adding words to collection
-    @PostMapping("/wordapi/addword/{addedWord}")
-    public ResponseEntity<Void> addWord(@PathVariable String addedWord) {
+    @PostMapping("/wordapi/addword")
+    public ResponseEntity<Void> addWord(@RequestBody String addedWord) {
         if (addedWord == null) return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 
         words.add(addedWord);
@@ -30,8 +30,8 @@ public class WordController {
     }
 
     //*2* Deleting words from collection
-    @DeleteMapping("/wordapi/deleteword/{deleteWord}")
-    public ResponseEntity<Void> deleteWord(@PathVariable String deleteWord) {
+    @DeleteMapping("/wordapi/deleteword")
+    public ResponseEntity<Void> deleteWord(@RequestBody String deleteWord) {
         if (deleteWord == null) return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 
         words = words.stream()

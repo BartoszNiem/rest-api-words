@@ -8,7 +8,7 @@ function addWordClick() {
     if (!word) {
         alert("Podaj słowo do dodania");
     } else {
-        let url = baseUrl + "/addword/" + word;
+        let url = baseUrl + "/addword" ;
 
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -19,7 +19,7 @@ function addWordClick() {
         };
         xhttp.open("POST", url, true);
         xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send();
+        xhttp.send(word);
     }
 }
 
@@ -32,7 +32,7 @@ function deleteWordClick() {
     if (!word) {
         alert("Podaj słowo do usunięcia");
     } else {
-        let url = baseUrl + "/deleteword/" + word;
+        let url = baseUrl + "/deleteword";
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -42,7 +42,7 @@ function deleteWordClick() {
             }
         };
         xhttp.open("DELETE", url, true);
-        xhttp.send();
+        xhttp.send(word);
     }
 }
 
